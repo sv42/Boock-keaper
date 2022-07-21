@@ -16,4 +16,4 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV.fetch("DATABASE") %>
+  database: <%= ENV.fetch("DATABASE") { 5 } %>
